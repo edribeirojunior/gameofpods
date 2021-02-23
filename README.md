@@ -1,8 +1,8 @@
 # Game Of Pods
 
-## King's Landing
+## King's Landing (Voting App)
 
-### TL;DR for King's Landing
+### TL;DR for King's Landing (Voting App)
 
 Ready Files/commands: 
 - [create-ns.yaml](./kings-landing/create-ns.yaml)
@@ -135,9 +135,9 @@ Open `~/result-service.yaml` and change `spec.selector.app` to `result-deploymen
 Then click in `Check` and get the `Magic chant` that start with `Hen desarrollo...`.
 
 
-## Iron Gallery
+## Iron Gallery of Braavos
 
-### TL;DR for Iron Gallery
+### TL;DR for Iron Gallery of Braavos
 
 Ready Files/commands: 
 - [iron-dep.yaml](./iron-gallery/iron-dep.yaml)
