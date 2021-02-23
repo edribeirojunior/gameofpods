@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    db: mariadb
+  name: iron-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      db: mariadb
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        db: mariadb
+    spec:
+      volumes:
+      - name: db
+        emptyDir: {}
+      containers:
+      - image: kodekloud/irondb:2.0
+        name: irondb
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "Braavo"
+        - name: MYSQL_DATABASE
+          value: "lychee"
+        - name: MYSQL_USER
+          value: "lychee"
+        - name: MYSQL_PASSWORD
+          value: "lychee"
+        resources: {}
+        volumeMounts:
+        - name: db
+          mountPath: "/var/lib/mysql"
+status: {}
