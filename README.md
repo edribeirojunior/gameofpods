@@ -5,16 +5,16 @@
 ### TL;DR for King's Landing
 
 Ready Files/commands: 
-1 - [create-ns.yaml](./kings-landing/create-ns.yaml)
-2 - [voting-dep.yaml](./kings-landing/voting-dep.yaml)
-3 - [vote-service.yaml](./kings-landing/vote-service.yaml)
-4 - [redis-dep.yaml](./kings-landing/redis-dep.yaml)
-5 - `kubectl expose deploy redis-deployment --name redis --port=6379 --target-port=6379 -n vote`
-6 - [worker-dep.yaml](./kings-landing/worker-dep.yaml)
-7 - [db-dep.yaml](./kings-landing/db-dep.yaml)
-8 - `kubectl expose deploy db-deployment --name db --port=5432 --target-port=5432 -n vote`
-9 - [result-dep.yaml](./kings-landing/result-dep.yaml)
-10 - [result-service.yaml](./kings-landing/result-service.yaml)
+- [create-ns.yaml](./kings-landing/create-ns.yaml)
+- [voting-dep.yaml](./kings-landing/voting-dep.yaml)
+- [vote-service.yaml](./kings-landing/vote-service.yaml)
+- [redis-dep.yaml](./kings-landing/redis-dep.yaml)
+- `kubectl expose deploy redis-deployment --name redis --port=6379 --target-port=6379 -n vote`
+- [worker-dep.yaml](./kings-landing/worker-dep.yaml)
+- [db-dep.yaml](./kings-landing/db-dep.yaml)
+- `kubectl expose deploy db-deployment --name db --port=5432 --target-port=5432 -n vote`
+- [result-dep.yaml](./kings-landing/result-dep.yaml)
+- [result-service.yaml](./kings-landing/result-service.yaml)
   
 
 ### Create Namespace
@@ -140,12 +140,12 @@ Then click in `Check` and get the `Magic chant` that start with `Hen desarrollo.
 ### TL;DR for Iron Gallery
 
 Ready Files/commands: 
-1 - [iron-dep.yaml](./iron-gallery/iron-dep.yaml)
-2 - [iron-gallery-svc.yaml](./iron-gallery/iron-gallery-svc.yaml)
-3 - [iron-db-dep.yaml](./iron-gallery/iron-db-dep.yaml)
-4 - [iron-db-service.yaml](./iron-gallery/iron-db-service.yaml)
-5 - [iron-netpolicy.yaml](./iron-gallery/iron-netpolicy.yaml)
-6 - [ingress-object.yaml](./iron-gallery/ingress-object.yaml)
+- [iron-dep.yaml](./iron-gallery/iron-dep.yaml)
+- [iron-gallery-svc.yaml](./iron-gallery/iron-gallery-svc.yaml)
+- [iron-db-dep.yaml](./iron-gallery/iron-db-dep.yaml)
+- [iron-db-service.yaml](./iron-gallery/iron-db-service.yaml)
+- [iron-netpolicy.yaml](./iron-gallery/iron-netpolicy.yaml)
+- [ingress-object.yaml](./iron-gallery/ingress-object.yaml)
 
 
 ### Ingress Iron
