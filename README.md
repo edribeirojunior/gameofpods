@@ -28,6 +28,8 @@ kubectl create deploy vote-deployment --image=kodekloud/examplevotingapp_vote:be
 ```
 Open `~/voting-dep.yaml` and change the containers name at `spec.template.spec.containers[0].name` to `examplevotingapp-vote` then `kubectl apply -f ~/voting-dep.yaml`
 
+> INFO: This is needed because in the Kubernetes v1.14 container name cannot have underline character. 
+
 Create a `Service Object` called `vote-service.yaml`:
 ```
 kubectl create svc nodeport vote-service --node-port=31000 --tcp=5000:80 -n vote --dry-run -o yaml > vote-service.yaml
@@ -74,6 +76,7 @@ kubectl create deploy worker --image=kodekloud/examplevotingapp_worker -n vote -
 
 Open `~/worker-dep.yaml` and change the containers name at `spec.template.spec.containers[0].name` to `examplevotingapp-worker` then `kubectl apply -f ~/worker-dep.yaml` . 
 
+> INFO: This is needed because in the Kubernetes v1.14 container name cannot have underline character. 
 ### Database
 
 Create a `Deploy Object` called `~/db-dep.yaml`: 
@@ -98,7 +101,7 @@ Also, add in `spec.templates.spec.containers[0]`:
         mountPath: "/var/lib/postgresql/data"
 ```
 
-INFO , the postgres container needs an ENV Variable, add in `.spec.templates.spec.containers[0]`:
+*INFO*, the postgres container needs an ENV Variable, add in `.spec.templates.spec.containers[0]`:
 ```
     name: postgres
     env:
@@ -121,6 +124,9 @@ Create a `Deploy Object` called `~/result-dep.yaml`:
 kubectl create deploy result-deployment --image=kodekloud/examplevotingapp_result:before -n vote --dry-run -o yaml > ~/result-dep.yaml
 ```
 Open `~/result-dep.yaml` and change the containers name at `spec.template.spec.containers[0].name` to `examplevotingapp-result` then `kubectl apply -f ~/result-dep.yaml`.
+
+> INFO: This is needed because in the Kubernetes v1.14 container name cannot have underline character. 
+
 
 Create a `Service Object` called `~/result-service.yaml`:
 ```
