@@ -4,17 +4,15 @@
 
 ### TL;DR for King's Landing (Voting App)
 
-Ready Files/commands: 
+Ready Files/commands just copy/paste/apply to the terminal: 
 - Create a Namespace - [create-ns.yaml](./kings-landing/create-ns.yaml)
-- Create Deployment Vote App - [voting-dep.yaml](./kings-landing/voting-dep.yaml)
-- Create Service for Deployment Vote App - [vote-service.yaml](./kings-landing/vote-service.yaml)
+- Create Deployment/Service for Vote App - [voting-dep.yaml](./kings-landing/voting-dep.yaml)
 - Create Deployment Redis - [redis-dep.yaml](./kings-landing/redis-dep.yaml)
 - Create Service for Redis Deployment - `kubectl expose deploy redis-deployment --name redis --port=6379 --target-port=6379 -n vote`
 - Create Deployment Worker - [worker-dep.yaml](./kings-landing/worker-dep.yaml)
 - Create Deployment DB - [db-dep.yaml](./kings-landing/db-dep.yaml)
 - Create Service for Deployment DB - `kubectl expose deploy db-deployment --name db --port=5432 --target-port=5432 -n vote`
-- Create Deployment Result App -[result-dep.yaml](./kings-landing/result-dep.yaml)
-- Create Service for Deployment Result App - [result-service.yaml](./kings-landing/result-service.yaml)
+- Create Deployment/Service for Result App -[result-dep.yaml](./kings-landing/result-dep.yaml)
   
 
 ### Create Namespace
@@ -139,11 +137,9 @@ Then click in `Check` and get the `Magic chant` that start with `Hen desarrollo.
 
 ### TL;DR for Iron Gallery of Braavos
 
-Ready Files/commands: 
-- Create Deployment Iron -[iron-dep.yaml](./iron-gallery/iron-dep.yaml)
-- Create Service for Deployment Iron - [iron-gallery-svc.yaml](./iron-gallery/iron-gallery-svc.yaml)
-- Create Deployment DB Iron - [iron-db-dep.yaml](./iron-gallery/iron-db-dep.yaml)
-- Create Service for Deployment DB Iron - [iron-db-service.yaml](./iron-gallery/iron-db-service.yaml)
+Ready Files/commands just copy/paste/apply to the terminal: 
+- Create Deployment/Service Iron -[iron-dep.yaml](./iron-gallery/iron-dep.yaml)
+- Create Deployment/Service DB Iron - [iron-db-dep.yaml](./iron-gallery/iron-db-dep.yaml)
 - Create Network Policy - [iron-netpolicy.yaml](./iron-gallery/iron-netpolicy.yaml)
 - Create Ingress - [ingress-object.yaml](./iron-gallery/ingress-object.yaml)
 
@@ -315,3 +311,7 @@ Then click in `Check` and get the `Magic chant` that start with `yamlio muño...
 # Optional!!
 
 The rest of the challenges are in this [Optional file](./Optional.md).
+
+# Solutions 
+
+This is just for you guys who just want the `Magic Chant`, check this [file](./solutions.txt).

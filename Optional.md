@@ -352,6 +352,16 @@ Now check the file `/etc/kubernetes/manifests/kube-apiserver.yaml`  the Certific
 ```
 systemctl restart kubelet
 ```
+Now uncordon the worker node, doing: 
+```
+kubectl uncordon node01
+```
+
+There's one last step to do in Master/Worker node, edit the deploy `coredns` in namespace `kube-system`: 
+```
+kubectl edit deploy coredns -n kube-system
+```
+And change the image name from `k8s.gcr.io/kubedns:1.3.1` to `k8s.gcr.io/coredns:1.3.1`  save and quit. 
 
 Now lets deploy the application, create a file `vim pv.yaml` and add:
 
@@ -386,8 +396,7 @@ Create a file `gop-pod.yaml`, using:
 ```
 kubectl run --generator=run-pod/v1 gop-fileserver --image=kodekloud/fileserver --dry-run -o yaml > gop-pod.yaml
 ```
-And add:
-
+Add the following values:
 ```
 apiVersion: v1
 kind: Pod

@@ -35,3 +35,23 @@ spec:
         - name: images
           mountPath: /usr/share/nginx/html/uploads
 status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: iron-gallery-service
+  name: iron-gallery-service
+spec:
+  ports:
+  - name: 80-80
+    nodePort: 30099
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: iron-gallery
+  type: NodePort
+status:
+  loadBalancer: {}

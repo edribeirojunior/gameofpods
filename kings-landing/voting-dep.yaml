@@ -23,3 +23,24 @@ spec:
         name: examplevotingapp-vote
         resources: {}
 status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: vote-service
+  name: vote-service
+  namespace: vote
+spec:
+  ports:
+  - name: 5000-80
+    nodePort: 31000
+    port: 5000
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: vote-deployment
+  type: NodePort
+status:
+  loadBalancer: {}

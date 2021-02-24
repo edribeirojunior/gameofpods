@@ -1,0 +1,15 @@
+Magic Chants
+
+# King's Landing
+
+Hen desarrollo, integreiddio. Hen integreiddio, testa. Hen testa, lifa.
+
+# Iron Gallery of Braavos
+
+yamlio muño ēngos ñuhys issa. Avy jorrāelan, yamlio!
+
+
+
+############################################################################################################
+Solution for Optional are in solutions-optionals.txt
+############################################################################################################
